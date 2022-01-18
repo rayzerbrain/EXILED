@@ -37,7 +37,7 @@ namespace Exiled.Events.Patches.Events.Map
 
             newInstructions.InsertRange(0, new[]
             {
-                // new ExplodingGrenadeEventArgs(Player.Get(PreviousOwner.Hub), this, null);
+                // new ExplodingGrenadeEventArgs(Player.Get(PreviousOwner.Hub), this, Array.Empty<Collider>());
                 new CodeInstruction(OpCodes.Ldarg_0),
                 new CodeInstruction(OpCodes.Ldflda, Field(typeof(Scp2176Projectile), nameof(Scp2176Projectile.PreviousOwner))),
                 new CodeInstruction(OpCodes.Ldfld, Field(typeof(Footprinting.Footprint), nameof(Footprinting.Footprint.Hub))),
