@@ -49,7 +49,7 @@ namespace Exiled.Events.Patches.Events.Map
                 new CodeInstruction(OpCodes.Dup),
 
                 // Handlers.Map.OnExplodingGrenade(ev);
-                new CodeInstruction(OpCodes.Call, Method(typeof(Exiled.Events.Handlers.Map), nameof(Exiled.Events.Handlers.Map.OnExplodingGrenade))),
+                new CodeInstruction(OpCodes.Call, Method(typeof(Exiled.Events.Handlers.Map), nameof(Handlers.Map.OnExplodingGrenade))),
 
                 // if(!ev.IsAllowed) return;
                 new CodeInstruction(OpCodes.Callvirt, PropertyGetter(typeof(ExplodingGrenadeEventArgs), nameof(ExplodingGrenadeEventArgs.IsAllowed))),
